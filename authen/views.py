@@ -12,7 +12,10 @@ def UserLogin(request):
         user=authenticate(username=username,password=password)
         if user is not None:
             login(request,user)
-            return redirect('dashboard')
+            if user.is_superuser == True:
+                return redirect('admin/')
+            else:
+                return redirect('dashboard')
         else:
             messages.error(request,'bad credentials!')
     return render(request,'login.html')
