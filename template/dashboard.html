@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %} SIGN UP {% endblock %}
+{% block title %} CDC {% endblock %}
 
 {% load static %}
 {% block css %} 
-<link rel="stylesheet" href="{% static 'signup.css' %}">
+<link rel="stylesheet" href="{% static 'login.css' %}">
 {% endblock %}
 
 {% block content%} 
 <body class="align">
     <div class="grid">
 
-        <form  method="POST" class="form login">
+
+        <form method="POST" class="form login">
             {% csrf_token %}
 
         <div class="form__field">
@@ -20,20 +21,6 @@
             </svg><span class="hidden">Username</span></label>
             <input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
         </div>
-
-        <div class="form__field">
-            <label for="login__email"><svg class="icon">
-                <use xlink:href="#icon-user"></use>
-            </svg><span class="hidden">Email</span></label>
-            <input autocomplete="Email" id="login__email" type="text" name="Email" class="form__input" placeholder="Email" required>
-        </div>        
-
-        <div class="form__field">
-            <label for="login__branch"><svg class="icon">
-                <use xlink:href="#icon-user"></use>
-            </svg><span class="hidden">branch</span></label>
-            <input autocomplete="branch" id="login__branch" type="text" name="branch" class="form__input" placeholder="branch" required>
-        </div> 
 
         <div class="form__field">
             <label for="login__password"><svg class="icon">
@@ -48,7 +35,7 @@
 
         </form>
 
-        <p class="text--center">already a member <a href="/">Log In now</a> <svg class="icon">
+        <p class="text--center">Not a member? <a href="signup">cdc</a> <svg class="icon">
             <use xlink:href="#icon-arrow-right"></use>
         </svg></p>
 
