@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
+from .models import CompanyData
 
 def DashBoard(request):
-    return render(request,'dashboard.html')
+    company=CompanyData.objects.all()
+    return render(request,'dashboard.html',{'company':company})
 # Create your views here.

@@ -30,17 +30,68 @@ body {
   -webkit-font-smoothing: antialiased;
   height: 100vh;
   width:auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  overflow: hidden;
+
 }
 
-.img1{
-    position:unset;
-    left: 50%;
-    top: 10%;
-    width: 200px;
-    height: auto;
+.container1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  align-items: baseline;
+}
+
+.outer{
+  position: relative;
+  display: flex;
+  overflow: auto;
+  max-height: 400px;
+  width: 1000px;
+  
+}
+
+.table1{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+th{
+  position: sticky;
+  width: 33%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+}
+td{
+  position: relative;
+  width: 33%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+
+}
+
+.form__field {
+  display: flex;
+  justify-content: center;
+}
+
+
+.form__field input[type="submit"] {
+  background-color: #ff9100;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  cursor: pointer;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
 }
 
 .sidebar-toggle {
@@ -117,3 +168,4 @@ body {
   padding-bottom: 13px;
   color: #aeb2b7;
 }
+
