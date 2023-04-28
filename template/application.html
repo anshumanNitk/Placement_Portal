@@ -51,21 +51,15 @@
       {% csrf_token %}
       <table class="table1">
         <tr>
-          <th>Company</th>
+          <th>company</th>
           <th>Role</th>
-          <th>Apply</th>
+          <th>ctc</th>
         </tr>
         {% for comp in company %}
         <tr>
-          <td>{{comp.CompanyName}}</td>
-          <td>{{comp.Roles}}</td>
-          <td>
-            <div class="form__field">
-              <button class="btn" id="but{{comp.id}}" name="button" value='{{comp.id}}'>
-                Apply
-              </button>
-            </div>
-          </td>
+          <td>{{comp.name}}</td>
+          <td>{{comp.roles}}</td>
+          <td>{{comp.ctc}}</td>
         </tr>
         {% endfor %}
       </table>

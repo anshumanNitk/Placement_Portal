@@ -21,7 +21,10 @@ def JobSec(request):
         files=request.FILES['file']        
         en=Job(name=name,branch=branch,resume=files)
         en.save()
+        return redirect('dashboard')
     return render(request,'JobPage.html',{'co':co})
+
+    
     
 
 
