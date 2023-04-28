@@ -1,57 +1,75 @@
-{% extends 'base.html' %}
-
-{% block title %} CDC {% endblock %}
+{% extends 'base.html' %} 
+{% block title %} CDC {% endblock %} 
 
 {% load static %}
-{% block css %} 
-<link rel="stylesheet" href="{% static 'dashboard.css' %}">
-{% endblock %}
-
-{% block content%} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'dashboard.css' %}" />
+<script>
+  function passvalues(){
+    let buttonPressed = event.target.id 
+    var compid=document.getElementById(buttonPressed).value;
+    localStorage.setItem('textvalue',compid);
+    return false;
+  }
+</script>
+{% endblock %} 
+{% block content %}
 <body>
-  {% block dashboard %}
-  <img src="{% static 'iris.png' %}" class="img1">
-  
-  <div class="container1">
-    <aside class="sidebar">
-      
-        <div id="leftside-navigation" class="nano">
-          <ul class="nano-content">
+  <div class="box1">
+    <img src="{% static 'iris.png' %}" class="img1" />
+  </div>
 
-            <li>
-              <a href="dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
-            </li>
-            <li class="sub-menu">
-              <a href="javascript:void(0);"><i class="fa fa-cogs"></i><span>Companies</span><i class="arrow fa fa-angle-right pull-right"></i></a>
-            </li>
-            <li class="sub-menu">
-              <a href="javascript:void(0);"><i class="fa fa-table"></i><span>your applications</span><i class="arrow fa fa-angle-right pull-right"></i></a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-      <div class="outer">
-        <table class="table1">
-          <tr>
-            <th>Company</th>
-            <th>Role</th>
-            <th>Apply</th>
-          </tr>
-          {% for comp in company %}
-          <tr>
-            <td>{{comp.CompanyName}}</td>
-            <td>{{comp.Roles}}</td>
-            <td>
-              <div class="form__field">
-                <input type="submit" value="Check out">
-              </div>
-            </td>
-          </tr>
-          {% endfor %}
-        </table>
+  <div class="container1">
+    <div class="sidebar">
+      <div id="leftside-navigation" class="nano">
+        <ul class="nano-content">
+          <li>
+            <img src="{% static 'placement.png' %}" class="img1" />
+          </li>
+          <li>
+            <a href="dashboard"
+              ><i class="fa fa-dashboard"></i><span>Dashboard</span></a
+            >
+          </li>
+
+          <li class="sub-menu">
+            <a href="javascript:void(0);"
+              ><i class="fa fa-table"></i><span>your applications</span
+              ><i class="arrow fa fa-angle-right pull-right"></i
+            ></a>
+          </li>
+          <li class="sub-menu">
+            <a href="/"
+              ><i class="fa fa-table"></i><span>Log out</span
+              ><i class="arrow fa fa-angle-right pull-right"></i
+            ></a>
+          </li>
+        </ul>
       </div>
     </div>
-    {% endblock %}
-</body> 
-
- {% endblock %} 
+    <form method="POST" class="outer">
+      {% csrf_token %}
+      <table class="table1">
+        <tr>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Apply</th>
+        </tr>
+        {% for comp in company %}
+        <tr>
+          <td>{{comp.CompanyName}}</td>
+          <td>{{comp.Roles}}</td>
+          <td>
+            <div class="form__field">
+              <button class="btn" id="but{{comp.id}}" name="button" value='{{comp.id}}' onclick="passvalues();">
+                Apply
+              </button>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </form>
+  </div>
+</body>
+{% endblock %}

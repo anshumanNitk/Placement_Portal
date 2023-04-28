@@ -1,0 +1,117 @@
+{% extends 'base.html' %} 
+{% block title %} jobpage {% endblock %} 
+{% load static %} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'jobpage.css' %}" />
+{% endblock %} 
+{% block content %}
+<body >
+  <div class="box1">
+    <img src="{% static 'iris.png' %}" class="img1" />
+  </div>
+
+  <div class="container1">
+    <div class="sidebar">
+      <div id="leftside-navigation" class="nano">
+        <ul class="nano-content">
+          <li>
+            <img src="{% static 'placement.png' %}" class="img1" />
+          </li>
+          <li>
+            <a href="dashboard"
+              ><i class="fa fa-dashboard"></i><span>Dashboard</span></a
+            >
+          </li>
+
+          <li class="sub-menu">
+            <a href="javascript:void(0);"
+              ><i class="fa fa-table"></i><span>your applications</span
+              ><i class="arrow fa fa-angle-right pull-right"></i
+            ></a>
+          </li>
+          <li class="sub-menu">
+            <a href="/"
+              ><i class="fa fa-table"></i><span>Log out</span
+              ><i class="arrow fa fa-angle-right pull-right"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <form method="POST" class="outer" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="desc">
+        <div class="top">
+          {% for jo in co %}
+          <div class="temp">
+            <h3>Name:</h3>
+            <h3>Role:</h3>
+            <h3>Description:</h3>
+            <h3>Salary:</h3>
+          </div>
+          <div class="entry">
+            <h3>{{jo.CompanyName}}</h3>
+            <h3>{{jo.Roles}}</h3>
+            <h3>{{jo.Description}}</h3>
+            <h3>{{jo.Salary}}</h3>
+          </div>
+          {% endfor %}
+        </div>
+        <br /><br /><br/>
+        <div class="detail">
+          <div class="form__field">
+            <label for="username"> <span class="hidden">Name:&nbsp;&nbsp;</span></label>
+            <input
+              autocomplete="name"
+              id="username"
+              type="text"
+              name="name"
+              class="form__input"
+              placeholder="name"
+              required
+            />
+          </div>
+          <br /><br /><br/>
+          <div class="form__field">
+            <label for="branchname"> <span class="hidden">Branch:&nbsp;&nbsp;</span></label>
+            <input
+              autocomplete="branch"
+              id="branchname"
+              type="text"
+              name="branch"
+              class="form__input"
+              placeholder="branch"
+              required
+            />
+          </div>
+          <br /><br /><br/>
+          <div class="form__field">
+            <label for="rollno"> <span class="hidden">Roll no.:&nbsp;&nbsp;</span></label>
+            <input
+              autocomplete="roll"
+              id="rollno"
+              type="text"
+              name="roll"
+              class="form__input"
+              placeholder="roll"
+              required
+            />
+          </div>
+          <br /><br /><br/>
+          <div class="form__field">
+            <label for="myfile">Upload Resume:&nbsp;&nbsp;</label>
+            <input type="file" id="myfile" name="file" /><br/>
+          </div>
+          <br/><br/><br/>
+          <div class="form__field">
+            <button type="submit" class="btn" name="btn" id="result" value="btn">submit</button>
+          </div>
+          <script>
+            document.getElementById("result").name=localStorage.getItem("textvalue");
+          </script>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+{% endblock %}

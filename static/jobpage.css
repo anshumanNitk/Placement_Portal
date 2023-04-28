@@ -61,12 +61,48 @@ body {
   position: relative;
   overflow-y: scroll;
   overflow-x: visible;
-  max-height: 80vh;
+  max-height: 100vh;
   max-width: auto;
-  font-family: 'Open sans';
   margin: auto;
-  border-radius: 20px 0px 0px 20px;
+  font-family: 'Open sans';
 }
+
+.desc{
+  display: flex;
+  width: 60vw;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #272727;
+  color: rgb(209, 209, 209);
+}
+
+.top{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: left;
+
+}
+
+.detail{
+  display: block;
+}
+
+.form__field{
+  float: left;
+  padding-left: 2%;
+}
+.form__field input{
+  background-color: #1e1e1e;
+  border:none;
+  text-align: center;
+  font-family: 'Open sans';
+  width:200px;
+  color: white;
+}
+
 
 .outer::-webkit-scrollbar {
   width: 0.2em;
@@ -81,53 +117,12 @@ body {
   border-radius: 20px;
 }
 
-tr:nth-child(even) {
-  background-color: #272727;
-}
 
-.table1{
-  position: relative;
-  background-color:#1a1a1a ;
-  color:#fefeff;
-  font-family: 'Open sans';
-  width: 70vw;
-}
 
-.form_field{
-  display: flex;
-  justify-content: center;
 
-}
 
-.btn {
-  padding: 0.4rem;
-  background-color: #315ff7;
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 0.55rem;
-  cursor: pointer;
-  font-family: 'Open Sans';
-  font-style: normal;
-}
 
-td{
-  width: 33%;
-  height: auto;
-  text-align: center;
-  padding: 2%;
 
-}
-
-th{
-  position: sticky;
-  top:0;
-  background-color: #1a1a1a;
-  width: 33%;
-  height: auto;
-  text-align: center;
-  padding: 1%;
-}
 
 
 
