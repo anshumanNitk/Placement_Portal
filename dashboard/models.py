@@ -23,4 +23,10 @@ class Job(models.Model):
     name=models.CharField( max_length=50,default=None)   
     branch=models.CharField( max_length=50,default=None) 
     resume=models.FileField(upload_to='dashboard/',null=False,max_length=250,default=None)
+    compname=models.CharField(max_length=50,default=None)
+    roles=models.CharField(max_length=50,default=None)
+    salary=models.CharField(max_length=50,default=None)
+        
     
+    def __str__(self):
+        return self.compname

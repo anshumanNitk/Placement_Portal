@@ -29,12 +29,14 @@
               ><i class="arrow fa fa-angle-right pull-right"></i
             ></a>
           </li>
+          {% if user.is_authenticated %}
           <li class="sub-menu">
             <a href="/"
               ><i class="fa fa-table"></i><span>Log out</span
               ><i class="arrow fa fa-angle-right pull-right"></i
             ></a>
           </li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -59,18 +61,6 @@
         </div>
         <br /><br /><br/>
         <div class="detail">
-          <div class="form__field">
-            <label for="username"> <span class="hidden">Name:&nbsp;&nbsp;</span></label>
-            <input
-              autocomplete="name"
-              id="username"
-              type="text"
-              name="name"
-              class="form__input"
-              placeholder="name"
-              required
-            />
-          </div>
           <br /><br /><br/>
           <div class="form__field">
             <label for="branchname"> <span class="hidden">Branch:&nbsp;&nbsp;</span></label>

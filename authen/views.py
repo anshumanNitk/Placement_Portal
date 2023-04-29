@@ -37,5 +37,10 @@ def UserSignUp(request):
         return redirect('login')        
     else:   
         return render(request,'signup.html')
+    
+def UserLogOut(request):
+    logout(request)
+    return redirect('login')
+     
 
 # Create your views here.

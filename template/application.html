@@ -38,12 +38,14 @@
               ><i class="arrow fa fa-angle-right pull-right"></i
             ></a>
           </li>
+          {% if user.is_authenticated %}
           <li class="sub-menu">
             <a href="/"
               ><i class="fa fa-table"></i><span>Log out</span
               ><i class="arrow fa fa-angle-right pull-right"></i
             ></a>
           </li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -57,9 +59,9 @@
         </tr>
         {% for comp in company %}
         <tr>
-          <td>{{comp.name}}</td>
+          <td>{{comp.compname}}</td>
           <td>{{comp.roles}}</td>
-          <td>{{comp.ctc}}</td>
+          <td>{{comp.salary}}</td>
         </tr>
         {% endfor %}
       </table>
