@@ -234,7 +234,6 @@
     background-color: var(--loginSubmitHoverBackgroundColor);
   }
   
-  /* modules/text.css */
   
   p {
     margin-top: 1.5rem;
@@ -244,3 +243,28 @@
   .text--center {
     text-align: center;
   }
+
+  .selectdiv {
+    position: relative;
+    top:0;
+    float:right;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .selectdiv select {
+    float: right;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #b9b9b9;
+    background-color: #434a52;
+    -ms-word-break: normal;
+    word-break: normal;
+  }
+  
+  

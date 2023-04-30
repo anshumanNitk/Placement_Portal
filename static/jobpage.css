@@ -1,73 +1,73 @@
-@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css');
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css");
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
   font-stretch: normal;
-  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf)
+    format("truetype");
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-stretch: normal;
-  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf)
+    format("truetype");
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-stretch: normal;
-  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf)
+    format("truetype");
 }
 
 body {
-  color: #5D5F63;
+  color: #5d5f63;
   background: #3b4246;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding: 0;
   margin: 0;
   height: 100vh;
-  width:auto;
+  width: auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
 }
 
-.box1{
+.box1 {
   width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: #272727;
-
 }
-.img1{
+.img1 {
   width: 150px;
-  padding-top:10px;
+  padding-top: 10px;
   padding-bottom: 6px;
 }
 
-
-.container1{
+.container1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.outer{
+.outer {
   position: relative;
   overflow-y: scroll;
   overflow-x: visible;
   max-height: 100vh;
   max-width: auto;
   margin: auto;
-  font-family: 'Open sans';
+  font-family: "Open sans";
 }
 
-.desc{
+.desc {
   display: flex;
   width: 60vw;
   flex-direction: column;
@@ -77,31 +77,61 @@ body {
   color: rgb(209, 209, 209);
 }
 
-.top{
+.top {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: left;
-
 }
 
-.detail{
+.detail {
   display: block;
 }
 
-.form__field{
+.form__field {
   float: left;
   padding-left: 2%;
 }
-.form__field input{
+
+.form__field input {
   background-color: #1e1e1e;
-  border:none;
+  border: none;
   text-align: center;
-  font-family: 'Open sans';
-  width:200px;
+  font-family: "Open sans";
+  width: 200px;
   color: white;
 }
+
+
+
+.selectdiv {
+  position: relative;
+  top:0;
+  float:right;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.selectdiv select {
+  width: 100%;
+  max-width: 200px;
+  height: 20px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
 
 
 .outer::-webkit-scrollbar {
@@ -117,18 +147,9 @@ body {
   border-radius: 20px;
 }
 
-
-
-
-
-
-
-
-
-
 .sidebar {
-  width:170px;
-  height:100vh ;
+  width: 170px;
+  height: 100vh;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -140,8 +161,7 @@ body {
   overflow-y: hidden;
   display: flex;
   flex-direction: row;
-  align-items:flex-start;
-
+  align-items: flex-start;
 }
 .sidebar #leftside-navigation ul,
 .sidebar #leftside-navigation ul ul {
@@ -196,4 +216,3 @@ body {
   padding-bottom: 13px;
   color: #aeb2b7;
 }
-
