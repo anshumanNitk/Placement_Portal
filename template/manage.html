@@ -1,0 +1,112 @@
+{% extends 'base.html' %} 
+{% block title %} CDC {% endblock %} 
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'manage.css' %}" />
+<script>
+  // function passvalues(){
+  //   let buttonPressed = event.target.id 
+  //   var compid=document.getElementById(buttonPressed).value;
+  //   localStorage.setItem('textvalue',compid);
+  //   return false;
+  // }
+</script>
+{% endblock %} 
+{% block content %}
+<body>
+  <div class="box1">
+    <img src="{% static 'iris.png' %}" class="img1" />
+  </div>
+
+  <div class="container1">
+    <div class="sidebar">
+      <div id="leftside-navigation" class="nano">
+        <ul class="nano-content">
+          <li>
+            <img src="{% static 'placement.png' %}" class="img1" />
+          </li>
+          <li>
+            <a href="dashboard"
+              ><i class="fa fa-dashboard"></i><span>Dashboard</span></a
+            >
+          </li>
+
+          <li class="sub-menu">
+            <a href="application"
+              ><i class="fa fa-table"></i><span>your applications</span
+              ><i class="arrow fa fa-angle-right pull-right"></i
+            ></a>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="sub-menu">
+            <a href="/"
+              ><i class="fa fa-table"></i><span>Log out</span
+              ><i class="arrow fa fa-angle-right pull-right"></i
+            ></a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+        <form method="POST" class="outer">
+            {% csrf_token %}
+            <h1>POC Section</h1>
+      
+            {% for i in compan %}
+              <label for="company">
+                  Company
+              </label>
+              
+              <input type="text"  id="companyname" readonly name="companyname" value="{{i.CompanyName}}">
+              
+              <label for="Role">
+                  Roles
+              </label>
+              
+              <input type="text" id="roles" name="roles" value="{{i.Roles}}" required>
+              
+              <label for="salary">
+                  Salary
+              </label>
+              
+              <input type="text" id="salary" name="salary"  value="{{i.Salary}}" required >
+              
+              <label for="start-dt">
+                  Starting Date and time
+              </label>
+              
+              <input type="datetime-local" id="start" name="start" value={{i.TimeStart}} required>
+              <label for="end-dt">
+                  Ending Date and Time
+              </label>
+      
+              <input type="datetime-local" id="end" name="end" value="{{i.TimeEnd}}" required>
+      
+              <label for="Description">
+                  Description
+              </label>
+              
+              <textarea id="description" name="description" required>{{i.Description}}</textarea>
+            {% endfor %}
+            
+            <input type="submit" value="Send" id="sendBtn">
+          </form>
+          <div class="local">
+            <table class="table1">
+                <h1>Applied Students</h1>
+                <tr>
+                  <th>Student's Name</th>
+                  <th>Resume</th>
+                </tr>
+                {% for j in job %}
+                <tr>
+                  <td>{{j.name}}</td>
+                  <td>{{j.resume}}</td>
+                </tr>
+                {% endfor %}
+              </table>
+          </div>
+  </div>
+</body>
+{% endblock %}

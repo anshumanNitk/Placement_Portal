@@ -31,6 +31,22 @@ def JobSec(request):
         return redirect('dashboard')
     return render(request,'JobPage.html',{'co':co})
 
+
+
+def Manage(request):
+    man=CompanyData.objects.filter(poc=request.user)
+    for i in man:
+        b=i.CompanyName
+    if request.method=='POST':
+        name=request.POST.get('companyname')
+        roles=request.POST.get('roles')
+        salary=request.POST.get('salary')
+        start=request.POST.get('start')
+        end=request.POST.get('end')
+        description=request.POST.get('description')
+        CompanyData.objects.filter(CompanyName=name).update(Roles=roles,Salary=salary,TimeStart=start,TimeEnd=end,Description=description)
+    jj=Job.objects.filter(compname=b)
+    return render(request,'manage.html',{'compan':man,'job':jj})
     
     
 

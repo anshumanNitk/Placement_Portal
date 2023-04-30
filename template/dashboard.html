@@ -39,12 +39,28 @@
             ></a>
           </li>
           {% if user.is_authenticated %}
+                {% for i in company %}
+                {% if i.poc == request.user %}
+                <li class="sub-menu">
+                  <a href="dashboardmanage"
+                  ><i class="fa fa-table"></i><span>
+                  Manage
+                  </span>
+                  <i class="arrow fa fa-angle-right pull-right"></i>
+                  </a>
+                </li>
+                {% else %}
+
+                {% endif %}
+                {% endfor %}
+
           <li class="sub-menu">
             <a href="/"
               ><i class="fa fa-table"></i><span>Log out</span
               ><i class="arrow fa fa-angle-right pull-right"></i
             ></a>
           </li>
+
           {% endif %}
         </ul>
       </div>

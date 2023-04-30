@@ -1,0 +1,206 @@
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css');
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+
+body {
+  color: #5D5F63;
+  background: #3b4246;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width:auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.box1{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #272727;
+
+}
+.img1{
+  width: 150px;
+  padding-top:10px;
+  padding-bottom: 6px;
+}
+
+
+.container1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+.outer{
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: visible;
+  max-height: 100vh;
+  max-width: 50vw;
+  font-family: 'Open sans';
+  margin: auto;
+  background-color: #1e1e1e ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.local{
+  position: relative;
+  overflow-y: scroll;
+  max-height: 100vh;
+  font-family: 'Open sans';
+}
+
+
+.outer::-webkit-scrollbar {
+  width: 0.2em;
+}
+.outer::-webkit-scrollbar-track {
+  border-radius: 20px 5px 5px 20px;
+}
+.outer::-webkit-scrollbar-thumb {
+  background-color: rgb(19, 139, 225);
+  outline: 1px solid rgb(0, 40, 81);
+  width: 0.5em;
+  border-radius: 20px;
+}
+
+  .outer label {
+    display: block;
+    padding: 1rem 0 0.25rem;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #3498DB;
+    position: relative;
+  }
+  .outer input, .outer textarea {
+
+    width: 80%;
+    border: 2px solid #272727;
+    padding: 0.5rem;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #272727;
+    color: aliceblue;
+    text-align: center;
+  }
+  
+  #sendBtn {
+    border: 0;
+    background: #343050;
+    padding: 0.5rem;
+    color: white;
+    margin: 1rem 0;
+    width: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  #sendBtn:hover {
+    background: #3498DB;
+  }
+
+
+.sidebar {
+  width:170px;
+  height:100vh ;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  position: relative;
+  background-color: #1e1e1e;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+
+}
+.sidebar #leftside-navigation ul,
+.sidebar #leftside-navigation ul ul {
+  margin: -2px 0 0;
+  padding: 0;
+}
+.sidebar #leftside-navigation ul li {
+  list-style-type: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.sidebar #leftside-navigation ul li a {
+  color: #aeb2b7;
+  text-decoration: none;
+  display: block;
+  padding: 18px 0 18px 25px;
+  font-size: 12px;
+  outline: 0;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+.sidebar #leftside-navigation ul li a:hover {
+  color: #1abc9c;
+}
+.sidebar #leftside-navigation ul li a span {
+  display: inline-block;
+}
+.sidebar #leftside-navigation ul li a i {
+  width: 20px;
+}
+.sidebar #leftside-navigation ul li a i .fa-angle-left,
+.sidebar #leftside-navigation ul li a i .fa-angle-right {
+  padding-top: 3px;
+}
+.sidebar #leftside-navigation ul ul {
+  display: none;
+}
+.sidebar #leftside-navigation ul ul li {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: none;
+}
+.sidebar #leftside-navigation ul ul li a {
+  font-size: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #aeb2b7;
+}
+

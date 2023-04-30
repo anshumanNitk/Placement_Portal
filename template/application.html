@@ -57,6 +57,7 @@
           <th>Role</th>
           <th>ctc</th>
         </tr>
+        {% if company %}
         {% for comp in company %}
         <tr>
           <td>{{comp.compname}}</td>
@@ -64,6 +65,13 @@
           <td>{{comp.salary}}</td>
         </tr>
         {% endfor %}
+        {% else %}
+        <tr>
+          <td colspan="5">YOU haven't Registered for any company!</td>
+          <td></td>
+          <td></td>
+        </tr>
+        {% endif %}
       </table>
     </form>
   </div>
