@@ -8,7 +8,7 @@ class CompanyData(models.Model):
     Salary=models.CharField(max_length=50,null=False)
     TimeStart=models.DateTimeField(auto_now=False, auto_now_add=False)
     TimeEnd=models.DateTimeField(auto_now=False, auto_now_add=False)
-    poc=models.ForeignKey(User,default=None,on_delete=models.DO_NOTHING)
+    poc=models.ForeignKey(User,default=None,on_delete=models.DO_NOTHING,unique=True)
     
     def __str__(self):
         
@@ -24,7 +24,7 @@ class inc(models.Model):
 class Job(models.Model):
     name=models.CharField( max_length=50,default=None)   
     branch=models.CharField( max_length=50,default=None) 
-    resume=models.FileField(upload_to='dashboard/',null=False,max_length=250,default=None)
+    resume=models.FileField(null=False,max_length=250,default=None)
     compname=models.CharField(max_length=50,default=None)
     roles=models.CharField(max_length=50,default=None)
     salary=models.CharField(max_length=50,default=None)

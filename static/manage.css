@@ -41,6 +41,8 @@ body {
   flex-direction: row;
   justify-content: center;
   background-color: #272727;
+  position: relative;
+  top: 0;
 
 }
 .img1{
@@ -53,7 +55,7 @@ body {
 .container1{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -64,8 +66,8 @@ body {
   position: relative;
   overflow-y: scroll;
   overflow-x: visible;
-  max-height: 100vh;
-  max-width: 50vw;
+  max-height: 80vh;
+  width: 50vw;
   font-family: 'Open sans';
   margin: auto;
   background-color: #1e1e1e ;
@@ -74,15 +76,6 @@ body {
   align-items: center;
   text-align: center;
 }
-
-
-.local{
-  position: relative;
-  overflow-y: scroll;
-  max-height: 100vh;
-  font-family: 'Open sans';
-}
-
 
 .outer::-webkit-scrollbar {
   width: 0.2em;
@@ -106,15 +99,16 @@ body {
     position: relative;
   }
   .outer input, .outer textarea {
-
-    width: 80%;
     border: 2px solid #272727;
     padding: 0.5rem;
+    width: 80%;
+    height: 100%;
     font-size: 18px;
     border-radius: 5px;
     background-color: #272727;
     color: aliceblue;
     text-align: center;
+
   }
   
   #sendBtn {
@@ -133,6 +127,61 @@ body {
   }
 
 
+
+
+  tr:nth-child(even) {
+    background-color: #272727;
+  }
+  
+
+
+  .table1{
+    position: relative;
+    background-color:#1a1a1a ;
+    color:#fefeff;
+    font-family: 'Open sans';
+    right: 0;
+    text-align: center;
+  }
+  
+  
+  .btn {
+    padding: 0.4rem;
+    background-color: #315ff7;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0.55rem;
+    cursor: pointer;
+    font-family: 'Open Sans';
+    font-style: normal;
+  }
+  
+  td{
+    width: 33%;
+    height: auto;
+    text-align: center;
+  
+  }
+  
+  th{
+    position: sticky;
+    top:0;
+    background-color: #1a1a1a;
+    width: 33%;
+    height: auto;
+    text-align: center;
+
+  }
+  
+
+
+
+
+
+
+
+
 .sidebar {
   width:170px;
   height:100vh ;
@@ -148,6 +197,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items:flex-start;
+  top:0;
 
 }
 .sidebar #leftside-navigation ul,

@@ -94,17 +94,27 @@
           </form>
           <div class="local">
             <table class="table1">
-                <h1>Applied Students</h1>
+              <tr>
+                <th colspan="3" style="background-color: white;">
+                  <h3 style="color: #272727;">Applied Students</h3>
+                </th>
+              </tr>
                 <tr>
                   <th>Student's Name</th>
                   <th>Resume</th>
                 </tr>
+                {% if job %}
                 {% for j in job %}
                 <tr>
                   <td>{{j.name}}</td>
-                  <td>{{j.resume}}</td>
+                  <td><a href="{{j.resume.url}}">download</a></td>
                 </tr>
                 {% endfor %}
+                {% else %}
+                <tr>
+                  <td colspan="2"> NO one has Registered for the company!</td>
+                </tr>
+                {% endif %}
               </table>
           </div>
   </div>
