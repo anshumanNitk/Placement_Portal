@@ -24,6 +24,22 @@
     format("truetype");
 }
 
+:root {
+  --loginBorderRadus: 0.25rem;
+  --loginColor: #eee;
+
+  --loginInputBackgroundColor: #3b4148;
+  --loginInputHoverBackgroundColor: #434a52;
+
+  --loginLabelBackgroundColor: #363b41;
+
+  --loginSubmitBackgroundColor: #ea4c88;
+  --loginSubmitColor: #eee;
+  --loginSubmitHoverBackgroundColor: #d44179;
+}
+
+
+
 body {
   color: #5d5f63;
   background: #3b4246;
@@ -61,11 +77,14 @@ body {
   position: relative;
   overflow-y: scroll;
   overflow-x: visible;
-  max-height: 95vh;
+  height: 86vh;
   max-width: auto;
   margin: auto;
   font-family: "Open sans";
+  bottom: 5%;
 }
+
+
 
 .desc {
   display: flex;
@@ -113,6 +132,24 @@ body {
   
 }
 
+.btn{
+  background-color: #1872f8;
+  color: #eee;
+  color: var(--loginSubmitColor);
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  float: right;
+  align-items: center;
+}
+
+.btn:hover{
+  background-color: #0031e3;
+  }
+.btn:focus{
+  background-color: #0031e3;
+
+}
 
 
 .selectdiv select {
