@@ -42,26 +42,28 @@
     </div>
     <form method="POST" class="outer" enctype="multipart/form-data">
       {% csrf_token %}
+      
       <div class="desc">
-        <div class="top">
-          {% for jo in co %}
-          <div class="temp">
-            <h3>Name:</h3>
-            <h3>Role:</h3>
-            <h3>Description:</h3>
-            <h3>Salary:</h3>
+        <h1 style="margin: auto; " >Hello {{request.user}}! </h1>
+        <p></p>
+          <div class="top">
+            {% for jo in co %}
+              <h2>Name</h2>
+              <h5>{{jo.CompanyName}}</h5>
+
+              <h2>Role</h2>
+              <h5>{{jo.Roles}}</h5>
+
+              <h2>Salary</h2>
+              <h5>{{jo.Salary}}</h5>
+
+              <h2>Description</h2>
+              <h5>{{jo.Description}}</h5>
+            {% endfor %}
           </div>
-          <div class="entry">
-            <h3>{{jo.CompanyName}}</h3>
-            <h3>{{jo.Roles}}</h3>
-            <h3>{{jo.Description}}</h3>
-            <h3>{{jo.Salary}}</h3>
-          </div>
-          {% endfor %}
-        </div>
+
         <br /><br /><br/>
         <div class="detail">
-          <br /><br /><br/>
           <div class="form__field">
             <label for="branchname"> <span class="hidden">Branch:&nbsp;&nbsp;</span></label>
             <div class="selectdiv">
@@ -102,9 +104,9 @@
           <div class="form__field">
             <button type="submit" class="btn" name="btn" id="result" value="btn">submit</button>
           </div>
-          <script>
+          <!-- <script>
             document.getElementById("result").name=localStorage.getItem("textvalue");
-          </script>
+          </script> -->
         </div>
       </div>
     </form>

@@ -61,7 +61,7 @@ body {
   position: relative;
   overflow-y: scroll;
   overflow-x: visible;
-  max-height: 100vh;
+  max-height: 95vh;
   max-width: auto;
   margin: auto;
   font-family: "Open sans";
@@ -72,18 +72,15 @@ body {
   width: 60vw;
   flex-direction: column;
   flex-wrap: wrap;
-  text-align: center;
   background-color: #272727;
   color: rgb(209, 209, 209);
 }
 
-.top {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  text-align: left;
+
+.top h2:nth-child(odd) {
+  background-color: #212121;
 }
+
 
 .detail {
   display: block;
@@ -116,6 +113,8 @@ body {
   
 }
 
+
+
 .selectdiv select {
   width: 100%;
   max-width: 200px;
@@ -146,6 +145,11 @@ body {
   width: 0.5em;
   border-radius: 20px;
 }
+
+
+
+
+
 
 .sidebar {
   width: 170px;
