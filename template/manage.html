@@ -28,7 +28,7 @@
           </li>
           <li>
             <a href="dashboard"
-              ><i class="fa fa-dashboard"></i><span>Dashboard</span></a
+              ><i class="fa fa-dashboard"></i><span>Home</span></a
             >
           </li>
 
@@ -94,11 +94,6 @@
           </form>
           <div class="local">
             <table class="table1">
-              <tr>
-                <th colspan="3" style="background-color: white;">
-                  <h3 style="color: #272727;">Applied Students</h3>
-                </th>
-              </tr>
                 <tr>
                   <th>Student's Name</th>
                   <th>Resume</th>
@@ -107,7 +102,7 @@
                 {% for j in job %}
                 <tr>
                   <td>{{j.name}}</td>
-                  <td><a href="{{j.resume.url}}">download</a></td>
+                  <td><a href="{{j.resume.url}}" style="text-decoration: none; color: green;">download</a></td>
                 </tr>
                 {% endfor %}
                 {% else %}
