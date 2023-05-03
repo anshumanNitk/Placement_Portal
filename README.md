@@ -114,3 +114,21 @@ This Application have covered Features like
 1. In POC page, after the POC updates the company details and send the data, the updated value on the form don't immediately show but after refreshing the page it is displayed.
 
 2. While creating an account, please create account with different usernames, i have the unique username constraint set but i was not able to do the error handling when an account is created with same username (it is also a Planned feature).
+
+## Demo Video
+[Click here](https://drive.google.com/drive/folders/1gMETpTmjcU9FN6dSWsmmSlSu7FUPANWM?usp=sharing)
+
+## screenshots
+![Screenshot (6)](https://user-images.githubusercontent.com/119486460/235931718-93607d14-4e3a-42be-b73e-50c9126a87ef.png)
+
+![Screenshot (1)](https://user-images.githubusercontent.com/119486460/235931148-32c4d50c-5d82-4304-b217-a4e9b343c4e9.png)
+
+![Screenshot (5)](https://user-images.githubusercontent.com/119486460/235931782-74320628-8fa7-420f-9212-a9be3c7a31d6.png)
+
+
+
+![Screenshot (3)](https://user-images.githubusercontent.com/119486460/235931408-39049eef-b017-400d-b749-1c625b4ce918.png)
+
+
+
+![Screenshot (4)](https://user-images.githubusercontent.com/119486460/235931454-0f34126c-9ff2-4965-9a7e-fe828d391582.png)
