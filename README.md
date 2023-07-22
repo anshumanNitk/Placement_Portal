@@ -3,7 +3,7 @@
 
 # CDC Placement Portal
 
-This is my completed task of iris recruitment, CDC Placement Portal. All major features are included in this project.
+This is my completed task, CDC Placement Portal. All major features are included in this project.
 
 
 
